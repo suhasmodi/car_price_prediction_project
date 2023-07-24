@@ -32,7 +32,7 @@ def main():
 
     name=st.selectbox("name of car:",name)
     company=st.selectbox("name of car company mfg:",company)
-    year=int(st.slider("year:",2001,2020,2001))
+    year=st.slider("year:",2001,2020,2001)
     kms_driven=st.text_input("kilometer driven")
     fuel_type=st.selectbox("fuel type",fuel_type)
 
@@ -49,10 +49,5 @@ def main():
 
 if __name__=='__main__':
     main()
-
-    inp_data=pd.DataFrame([['Maruti Suzuki Swift' ,'Maruti',2019,50000,'Petrol']],columns=['name','company','year','kms_driven','fuel_type'])
-
-    y_pred=model.predict(inp_data)
-    print("preiction: ",y_pred)
 
 
